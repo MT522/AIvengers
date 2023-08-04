@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+
 /* 
 ==================================
 Global Styles
@@ -12,6 +14,9 @@ Global Styles
     --transition: all 0.3s linear;
     --spacing: 0.25rem;
     --radius: 0.5rem;
+    --font1: 'Roboto', sans-serif;
+    --font2: 'Rubik', sans-serif;
+    --font3: 'Source Code Pro' , monospace;
 }
 
 * {
@@ -67,33 +72,35 @@ p {
 }
 
 @media screen and (min-width: 80px) {
+
     h1,
-h2,
-h3,
-h4 {
-    line-height: 1.25;
+    h2,
+    h3,
+    h4 {
+        line-height: 1.25;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
 }
 
-h1 {
-    font-size: 4rem;
-}
-
-h2 {
-    font-size: 2.5rem;
-}
-
-h3 {
-    font-size: 2rem;
-}
-
-h4 {
-    font-size: 1rem;
-}
-
-body {
-    font-size: 1rem;
-}
-}
 /* 
 ==================================
 End Global Styles
@@ -102,7 +109,7 @@ End Global Styles
 
 .header {
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/Back.png') center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/Back.png') center/cover no-repeat fixed;
     position: relative;
 }
 
@@ -112,12 +119,38 @@ End Global Styles
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: var(--font3);
 }
 
 .banner h2 {
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
-.banner h1{
+.banner h1 {
     font-size: 8vw;
+}
+
+.AI {
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    animation:
+        typing 3s infinite,
+        cursor .4s step-end infinite alternate;
+}
+
+
+@keyframes cursor {
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
 }
