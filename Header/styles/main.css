@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
 
 /* 
 ==================================
@@ -16,7 +18,8 @@ Global Styles
     --radius: 0.5rem;
     --font1: 'Roboto', sans-serif;
     --font2: 'Rubik', sans-serif;
-    --font3: 'Source Code Pro' , monospace;
+    --font3: 'Source Code Pro', monospace;
+    --font4: 'fantasy', Oswald;
 }
 
 * {
@@ -30,6 +33,9 @@ body {
     color: white;
     line-height: 1.5;
     font-size: 0.875rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/Back.png') center/cover no-repeat fixed;
+    min-height: 3000px;
+    font-family: var(--font4);
 }
 
 a {
@@ -109,7 +115,6 @@ End Global Styles
 
 .header {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/Back.png') center/cover no-repeat fixed;
     position: relative;
 }
 
@@ -130,6 +135,8 @@ End Global Styles
     font-size: 8vw;
 }
 
+
+/*======================================== ai typing animation ======================================== */
 .AI {
     border-right: 5px solid;
     width: 100%;
@@ -150,7 +157,108 @@ End Global Styles
 }
 
 @keyframes typing {
-    from{
+    from {
         width: 0;
     }
+}
+
+/*===================================================================================================== */
+
+#buySection {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    #buySection {
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+}
+
+#deepSection,
+#MLSection,
+#DSSection,
+#RLSection {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: auto 1fr auto auto auto;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sectionImage {
+    width: 100%;
+    grid-row: span 5;
+}
+
+.sectionLabel {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    padding: 5px;
+}
+
+.sectionDescription {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: right;
+    padding: 5px;
+}
+
+.buy1Btn{
+    grid-column: 2;
+    grid-row: 4;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy1Btn:hover{
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.buy2Btn{
+    grid-column: 2;
+    grid-row: 5;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy2Btn:hover{
+    background-color: #2980b9;
+    transform: scale(1.05);
 }
