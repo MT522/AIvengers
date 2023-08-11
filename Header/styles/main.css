@@ -259,20 +259,29 @@ End Global Styles
     grid-row: 1;
     text-align: center;
     padding: 5px;
+<<<<<<< HEAD
     font-size: 3vw;
+=======
+    font-size: 25px;
+>>>>>>> 133790e6f74238afee4c5f4057f3614901bba677
 }
 
 .sectionDescription {
     grid-column: 2;
+<<<<<<< HEAD
     grid-row: 2;
     text-align: right;
+=======
+    grid-row: 3;
+    text-align: left;
+>>>>>>> 133790e6f74238afee4c5f4057f3614901bba677
     padding: 5px;
     direction: rtl;
     font-family: var(--font5);
     font-size: 1.2rem;
 }
 
-.buy1Btn{
+.buyBtn{
     grid-column: 2;
     grid-row: 3;
     display: inline-block;
@@ -288,6 +297,7 @@ End Global Styles
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+<<<<<<< HEAD
 .buy1Btn:hover{
     background-color: #2980b9;
     transform: scale(1.05);
@@ -310,6 +320,9 @@ End Global Styles
 }
 
 .buy2Btn:hover{
+=======
+.buyBtn:hover{
+>>>>>>> 133790e6f74238afee4c5f4057f3614901bba677
     background-color: #2980b9;
     transform: scale(1.05);
 } */
