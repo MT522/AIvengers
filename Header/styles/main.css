@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lateef:wght@300;400;500;600&display=swap');
 
 /* 
 ==================================
@@ -20,6 +20,7 @@ Global Styles
     --font2: 'Rubik', sans-serif;
     --font3: 'Source Code Pro', monospace;
     --font4: 'fantasy', Oswald;
+    --font5: 'Lateef', serif;
 }
 
 * {
@@ -34,7 +35,7 @@ body {
     line-height: 1.5;
     font-size: 0.875rem;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/Back.png') center/cover no-repeat fixed;
-    min-height: 3000px;
+    min-height: 220vh;
     font-family: var(--font4);
 }
 
@@ -77,7 +78,7 @@ p {
     margin-bottom: 1.25rem;
 }
 
-@media screen and (min-width: 80px) {
+@media screen and (max-width: 768px) {
 
     h1,
     h2,
@@ -104,6 +105,7 @@ p {
 
     body {
         font-size: 1rem;
+        min-height: 300vh;
     }
 }
 
@@ -164,6 +166,41 @@ End Global Styles
 
 /*===================================================================================================== */
 
+
+/*============================================HOST==============================================*/
+
+.host {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 30vh;
+    display: grid;
+    margin-top: 5vh;
+    /* gap: 10px; */
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#host {
+    font-family: var(--font1);
+    font-size: 3vh;
+    text-align: center;
+    grid-row: 1;
+    grid-column: span 3;
+    /* margin: 50px; */
+}
+
+#hostImage {
+    /* width: 50%; */
+    /* height: 80%; */
+    grid-row: 2;
+    grid-column: 2;
+}
+
+/*==============================================================================================*/
+
+
+
 #buySection {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -181,6 +218,9 @@ End Global Styles
         grid-template-columns: 1fr;
         max-width: none;
     }
+    #sectionImage {
+        width: 70%;
+    }
 }
 
 #deepSection,
@@ -189,9 +229,9 @@ End Global Styles
 #RLSection {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     border-radius: 10px;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
     border: 1px solid #ddd;
     padding: 20px;
     gap: 10px;
@@ -202,28 +242,39 @@ End Global Styles
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* #MLSection {
+    background : linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/ML.png') center/cover no-repeat fixed;
+    background-size: 40%;
+    background-position: 80%;
+} */
+
 .sectionImage {
     width: 100%;
-    grid-row: span 5;
+    grid-row: span 4;
+    border-radius: 5%;
 }
 
 .sectionLabel {
-    grid-column: 2;
+    grid-column: span 2;
     grid-row: 1;
-    text-align: right;
+    text-align: center;
     padding: 5px;
+    font-size: 3vw;
 }
 
 .sectionDescription {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 2;
     text-align: right;
     padding: 5px;
+    direction: rtl;
+    font-family: var(--font5);
+    font-size: 1.2rem;
 }
 
 .buy1Btn{
     grid-column: 2;
-    grid-row: 4;
+    grid-row: 3;
     display: inline-block;
     padding: 10px 20px;
     background-color: #3498db;
@@ -242,7 +293,7 @@ End Global Styles
     transform: scale(1.05);
 }
 
-.buy2Btn{
+/* .buy2Btn{
     grid-column: 2;
     grid-row: 5;
     display: inline-block;
@@ -261,4 +312,4 @@ End Global Styles
 .buy2Btn:hover{
     background-color: #2980b9;
     transform: scale(1.05);
-}
+} */
